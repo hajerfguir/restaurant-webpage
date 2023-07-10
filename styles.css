@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+
+body {
+  margin: 0;
+  text-align: center;
+  background-color: #475c6c;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly; /*selon axe des x*/
+  align-items: stretch; /*selon axe des y*/
+  gap: 15px;
+  text-align: left;
+  padding: 0 15px;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: calc(992px / 3);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  flex: 1 0 auto;
+  padding: 10px;
+  position: relative;
+  background-color: white;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 2/1;
+  margin: 10px;
+  margin-bottom: 0;
+}
+
+.container:hover {
+  scale: 1.02;
+  transition: all 0.5s ease-in-out;
+}
+
+.firstLetter {
+  font-family: "Dancing Script", cursive;
+  font-size: 20px;
+}
+
+#title {
+  font-family: "Dancing Script", cursive;
+  color: aliceblue;
+  font-size: 40px;
+}
+
+.food {
+  flex-grow: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: black;
+  padding: 5px;
+  font-weight: bold;
+  width: 80px;
+  text-align: center;
+  border-top-right-radius: 5px;
+}
+#Chicken {
+  background-color: #eed7a1;
+}
+#Beef {
+  background-color: #eed9c4;
+}
+#Sushi {
+  background-color: #cd8b62;
+}
+
+.text {
+  padding: 10px;
+}
+
+@media (min-width: 768px) and (max-width: 992.99px) {
+  .wrapper {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 767.99px) {
+  .wrapper {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .container {
+    width: 100%;
+  }
+  .container:hover {
+    scale: 1.01;
+  }
+}
