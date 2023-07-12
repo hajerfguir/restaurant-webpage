@@ -5,6 +5,7 @@ body {
   margin: 0;
   text-align: center;
   background-color: #475c6c;
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -80,6 +81,9 @@ body {
 
 .text {
   padding: 10px;
+  text-align: justify;
+  text-justify: inter-word;
+  padding-top: 0; ;
 }
 
 @media (min-width: 768px) and (max-width: 992.99px) {
@@ -90,7 +94,6 @@ body {
 @media (max-width: 767.99px) {
   .wrapper {
     flex-direction: column;
-    justify-content: flex-start;
   }
   .container {
     width: 100%;
